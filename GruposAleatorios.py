@@ -17,4 +17,21 @@ def num_ask(n):
         time.sleep(2.4)
         exit()
 
+def read_file(path): 
+    line = []
+    try:
+        with open(path, "r") as f:
+            l = f.readline()
+            for lines in l: 
+                line.append(lines.rstrip("\n"))
+        f.close()
+        return line
+    except IOError:
+        print("Archivo no encontrado")
+        time.sleep(2.4)
+        exit()
+
+        
+        
+
 if __name__ == "__main__":
