@@ -31,7 +31,12 @@ def read_file(path):
         time.sleep(2.4)
         exit()
 
-        
-        
+def req(gnum,std,temas):
+    if(gnum <= len(temas) and len(std) >= gnum):
+        return True
+    else:
+        print("Parametro no valido")
+        time.sleep(2.4)
+        exit()
 
 if __name__ == "__main__":
