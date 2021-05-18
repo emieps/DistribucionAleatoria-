@@ -1,4 +1,5 @@
 import pytest
+import GruposAleatorios as gp
 
 
 #Prueba de Division
@@ -33,12 +34,21 @@ import pytest
     ]
 )
 
-#Probar String
+#Probar requerimientos 
 @pytest.mark.parametrize(
     "num, std_list, themes_list",
     [
         (5, ["Lenore", "Candice", "Chanel", "Chet","Lorenzo"], ["Sociales", "Naturales", "Matematicas", "Lengua Española", "Religion"]), 
          (13, ["Lenore", "Candice", "Chanel", "Chet","Lorenzo","Juan","Maria","Jaime","Pedro","David","Jesus","Moises","Herodes"], 
           ["Sociales", "Naturales", "Matematicas", "Lengua Española", "Religion", "Artes", "Informatica", "Civica", "Ingles", "Recreo", "Quimica", "Fisica", "Edu. Fisica"]),
+    ]
+)
+
+#Probar lectura 
+@pytest.mark.parametrize(
+    "path, expect",
+    [
+        (r"C:\Users\Emily\Desktop\1.Tendencias\Prueba\std_1.txt", ["Lenore", "Candice", "Chanel", "Chet","Leori"]), 
+        (r"C:\Users\Emily\Desktop\1.Tendencias\Prueba\std_2.txt", ["Lenore", "Candice", "Chanel", "Chet", "Leori", "Robbie", "Annalise", "Ashleigh", "Jaxx"])
     ]
 )
