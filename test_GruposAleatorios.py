@@ -22,3 +22,11 @@ import pytest
         (["Lenore", "Candice", "Chanel", "Chet","Lorenzo","Juan","Maria","Jaime","Pedro","David","Jesus","Moises","Herodes"],5,3), 
     ]
 )
+
+#Prueba de Remanente
+@pytest.mark.parametrize(
+    "lst, rem, except",
+    [
+        
+    ]
+)
