@@ -23,10 +23,22 @@ import pytest
     ]
 )
 
-#Prueba de Remanente
+#Probar String
 @pytest.mark.parametrize(
-    "lst, rem, except",
+    "num, expect",
     [
-        
+        ("5", 5),
+        ("6", 6),
+        ("3000", 3000)
+    ]
+)
+
+#Probar String
+@pytest.mark.parametrize(
+    "num, std_list, themes_list",
+    [
+        (5, ["Lenore", "Candice", "Chanel", "Chet","Lorenzo"], ["Sociales", "Naturales", "Matematicas", "Lengua Española", "Religion"]), 
+         (13, ["Lenore", "Candice", "Chanel", "Chet","Lorenzo","Juan","Maria","Jaime","Pedro","David","Jesus","Moises","Herodes"], 
+          ["Sociales", "Naturales", "Matematicas", "Lengua Española", "Religion", "Artes", "Informatica", "Civica", "Ingles", "Recreo", "Quimica", "Fisica", "Edu. Fisica"]),
     ]
 )
